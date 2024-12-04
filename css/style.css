@@ -63,7 +63,6 @@ body {
     margin-inline: auto;
     margin-block: 80px;
     /* background-color: var(--bg-color); */
-
 }
 
 header {
@@ -71,6 +70,7 @@ header {
     display: flex;
     justify-content: center;
     margin-block-end: 64px;
+    border: 1px solid var(--red);
 }
 
 header hgroup {
@@ -97,9 +97,31 @@ header h1:last-of-type {
 }
 
 p {
-    color: #4D4F62;
-font-size: 15px;
-font-weight: 400;
-line-height: 25px; 
-opacity: .5;
+    color: #4d4f62;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    opacity: 0.5;
+}
+
+main {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border: 1px solid var(--red);
+}
+
+section.two-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+article {
+    width: 350px;
+    height: 250px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
 }

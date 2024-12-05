@@ -7,6 +7,7 @@
     --cyan: #44d3d2;
     --orange: #fcae4a;
     --blue: #549ef2;
+    --top-stick: #549ef2;
 
     /* Neutral */
 
@@ -54,7 +55,6 @@ div {
 }
 
 body {
-    max-width: 1440px;
     height: 100vh;
     font-family: "Poppins", sans-serif;
     background-color: var(--bg-color);
@@ -71,7 +71,6 @@ header {
     display: flex;
     justify-content: center;
     margin-block-end: 64px;
-    border: 1px solid var(--red);
 }
 
 header hgroup {
@@ -106,11 +105,11 @@ p {
 }
 
 main {
+    height: 530px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    border: 1px solid var(--red);
 }
 
 section.two-cards {
@@ -130,6 +129,7 @@ article {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
 }
 
 article h3 {
@@ -151,23 +151,45 @@ article p {
 article div {
     width: 64px;
     height: 64px;
-    /* border: 1px solid var(--red); */
-    border: none;
     align-self: flex-end;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-article.supervisor div {
+article.supervisor div.image {
     background-image: url(../images/icon-supervisor.svg);
 }
 
-article.team-builder div {
+article.team-builder div.image {
     background-image: url(../images/icon-team-builder.svg);
 }
-article.karma div {
+article.karma div.image {
     background-image: url(../images/icon-karma.svg);
 }
-article.calculator div {
+article.calculator div.image {
     background-image: url(../images/icon-calculator.svg);
+}
+
+
+div.stick{
+    width: 100%;
+    height: 8px;
+    border-radius: 8px 8px 0 0 ;
+    background: linear-gradient(to bottom, var(--top-stick) 50%, #fff 50% );
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.supervisor div.stick {
+    --top-stick: var(--cyan);
+}
+.team-builder {
+    --top-stick: var(--red);
+}
+.karma {
+    --top-stick: var(--orange);
+}
+.calculator {
+    --top-stick: var(--blue);
 }

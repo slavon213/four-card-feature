@@ -37,7 +37,7 @@ body {
     background-color: var(--bg-color);
 }
 
-.container {
+section {
     max-width: 1110px;
     margin-inline: auto;
     margin-block: 80px;
@@ -91,7 +91,7 @@ main {
     gap: 30px;
 }
 
-section.two-cards {
+div.two-cards {
     display: flex;
     flex-direction: column;
     gap: 30px;
